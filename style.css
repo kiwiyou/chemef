@@ -105,6 +105,7 @@ ul.result {
     list-style: none;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    overflow: auto;
 }
 
 ul.result > li {
