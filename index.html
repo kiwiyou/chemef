@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="화학식의 계수를 맞춰줍니다.">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>화학 반응식 계산기</title>
+    </head>
+
+    <body>
+        <section id="app"></section>
+        <script type="module">
+            // https://rustwasm.github.io/docs/wasm-bindgen/examples/without-a-bundler.html
+            import init from '/pkg/package.js';
+            init('/pkg/package_bg.wasm');
+        </script>
+        <script>
+            function activate_all_animations() {
+                [...document.getElementsByTagName("animate")].forEach(a => a.beginElement());
+            }
+        </script>
+    </body>
+</html>
