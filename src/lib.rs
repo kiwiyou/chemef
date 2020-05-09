@@ -307,7 +307,7 @@ fn history_view(model: &Model) -> Node<Msg> {
     }
 }
 
-fn view(model: &Model) -> impl View<Msg> {
+fn view(model: &Model) -> impl IntoNodes<Msg> {
     let error_view = if let Some(ref error_message) = model.error {
         label![class!["error"], format!("Error : {}", error_message)]
     } else {
