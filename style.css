@@ -7,11 +7,10 @@ html, body, #app {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: stretch;
+    overflow: hidden;
 }
 
 #how-to {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,13 +24,13 @@ html, body, #app {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
     display: inline-block;
     padding: 10px;
-    font-size: 2em;
+    font-size: 1em;
     letter-spacing: -0.1em;
 }
 
 #how-to > p {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.3em;
+    font-size: 0.7em;
     margin-top: 10px;
     text-align: center;
 }
@@ -40,7 +39,7 @@ html, body, #app {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 90%;
 }
 
 #calculator > h1 {
@@ -48,7 +47,7 @@ html, body, #app {
     display: inline;
     font-family: 'NanumSquare', sans-serif;
     font-weight: bold;
-    font-size: 1.7em;
+    font-size: 1em;
 }
 
 div.expression {
@@ -73,9 +72,9 @@ svg.error {
 }
 
 input[name="expression"], div.result {
-    width: calc(100% - 20px);
-    margin: 10px;
-    font-size: 3em;
+    width: calc(100% - 6px);
+    margin: 3px;
+    font-size: 1em;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.05em;
     text-align: center;
@@ -84,6 +83,10 @@ input[name="expression"], div.result {
     padding: 10px;
     box-sizing: border-box;
     box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+label {
+    font-size: 0.7em;
 }
 
 label.error {
@@ -101,11 +104,11 @@ ul.result {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
-    width: 50%;
+    width: 100%;
     list-style: none;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 ul.result > li {
@@ -118,7 +121,6 @@ ul.result > li > header {
 }
 
 ul.result > li > section {
-    flex: 1;
     display: inline;
     font-family: 'Montserrat', sans-serif;
 }
@@ -131,5 +133,37 @@ ul.result > li > section {
     to {
         transform: none;
         opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #how-to > h1 {
+        font-size: 1.7em;
+    }
+
+    #how-to > p {
+        font-size: 1em;
+    }
+
+    #calculator {
+        width: 70%;
+    }
+
+    #calculator > h1 {
+        font-size: 1.7em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input[name="expression"], div.result {
+        width: calc(100% - 20px);
+        margin: 10px;
+        font-size: 3em;
+    }
+
+    ul.result {
+        width: 70%;
     }
 }
